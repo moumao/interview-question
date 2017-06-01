@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+</head>
+<body>
+<header>
+    <h2>服务</h2>
+    <div class="que"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyBjbGFzcz0iaWNvbiIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOC4wMHB4IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkyMS4zIDUxMmMwLTIyNi0xODMuMi00MDkuMy00MDkuMy00MDkuMy0yMjYuMSAwLTQwOS4zIDE4My4yLTQwOS4zIDQwOS4zIDAgMjI2LjEgMTgzLjIgNDA5LjMgNDA5LjMgNDA5LjMgOTIuOCAwIDE3Ny44LTMxLjYgMjQ2LjQtODMuNiAyLjgtMy4yIDQuNy03LjMgNC43LTExLjkgMC0xMC04LjEtMTguMS0xOC4xLTE4LjEtNS4yIDAtOS44IDIuMS0xMy4xIDUuNmwtMC4zIDBjLTYxLjQgNDUuMi0xMzcuMSA3Mi4zLTIxOS4yIDcyLjMtMjA0LjcgMC0zNzAuNy0xNjYtMzcwLjctMzcwLjcgMC0yMDQuNyAxNjYtMzcwLjcgMzcwLjctMzcwLjcgMjA0LjcgMCAzNzAuNyAxNjUuOSAzNzAuNyAzNzAuNyAwIDYyLjUtMTQuNyAxMjEuNC00MiAxNzMuMWwwIDAuM2MtMC41IDEuNy0xLjEgMy40LTEuMSA1LjMgMCAxMCA4LjEgMTguMSAxOC4xIDE4LjEgNy44IDAgMTQuMy01IDE2LjktMTEuOWwwIDAuMUM5MDQuMSA2NDMuNSA5MjEuMyA1NzkuOCA5MjEuMyA1MTJ6IiBmaWxsPSIjOGE4YThhIiAvPjxwYXRoIGQ9Ik00OTcuNSA3MjAuOW0tMzIuMyAwYTMyLjMgMzIuMyAwIDEgMCA2NC42IDAgMzIuMyAzMi4zIDAgMSAwLTY0LjYgMFoiIGZpbGw9IiM4YThhOGEiIC8+PHBhdGggZD0iTTU3NS45IDUxNi42YzQwLjMtMjAuMyA5MC40LTQ1LjYgOTAuNC0xMTQuMSAwLTc4LjEtNjcuMy0xMzIuNi0xNjMuNy0xMzIuNi03MC4xIDAtMTMxLjkgNDAuMi0xNTMuOCAxMDAuMS01IDEzLjgtOS40IDM2LjctNS4xIDU1LjkgMi42IDExLjYgMTQuMiAxOC45IDI1LjcgMTYuMyAxMS42LTIuNiAxOC45LTE0LjEgMTYuMy0yNS43LTEuNy03LjgtMC4zLTIxLjUgMy41LTMxLjggMTMtMzUuNyA1My4xLTcxLjcgMTEzLjMtNzEuNyA3MSAwIDEyMC42IDM2LjggMTIwLjYgODkuNSAwIDQwLTI1LjMgNTQuOC02Ni43IDc1LjctMzYgMTguMi04MC44IDQwLjgtODAuOCA5Ni43bDAgNTMuM2MwIDExLjkgOS42IDIxLjYgMjEuNSAyMS42IDExLjkgMCAyMS41LTkuNyAyMS41LTIxLjZsMC01My4zQzUxOC43IDU0Ni44IDUzOS40IDUzNSA1NzUuOSA1MTYuNnoiIGZpbGw9IiM4YThhOGEiIC8+PC9zdmc+"></div>
+</header>
+<div id="had">
+    <h3>已选的服务</h3>
+    <ul id="check-lists" class="drag_module_box">
+    </ul>
+</div>
+
+<script src="http://cdn.bootcss.com/less.js/3.0.0-pre.4/less.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/touch.js"></script>
+<script src="js/main.js"></script>
+<script>
+    let storage=window.localStorage;
+    for(let i=0;i<storage.length;i++){
+        let key=JSON.parse(storage.getItem(storage.key(i))),
+            name=key.name,
+            text=key.text;
+        addList(name,text);
+    }
+    loopbox()
+</script>
+</body>
+</html>
